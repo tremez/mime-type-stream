@@ -1,2 +1,2 @@
 # mime-type-stream
-Ger mime type of the readable stream
+Detect the mime type of files in a stream

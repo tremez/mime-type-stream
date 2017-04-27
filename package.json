@@ -1,0 +1,64 @@
+{
+  "name": "mime-type-stream",
+  "version": "0.0.1",
+  "description": "Detect the mime type of files in a stream",
+  "repository": "tremez/node-mime-type-stream",
+  "author": {
+    "name": "Tzvi Remez",
+    "url": "https://github.com/tremez"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/tremez/node-mime-type-stream/blob/master/LICENSE"
+    }
+  ],
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "pretest": "jscs *.js test/test.js && eslint *.js test/test.js",
+    "test": "mocha --timeout 7500",
+    "test-dot": "mocha --reporter dot --timeout 7500",
+    "coverage": "istanbul cover --no-default-excludes -x=node_modules/** _mocha -- -t 7500",
+    "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
+  },
+  "keywords": [
+    "image",
+    "size",
+    "dimension",
+    "detect",
+    "width",
+    "height",
+    "stream",
+    "bmp",
+    "gif",
+    "jpg",
+    "jpeg",
+    "png",
+    "psd",
+    "tiff",
+    "webp",
+    "svg"
+  ],
+  "dependencies": {
+    "image-size": "netroy/image-size#da2c863807a3e9602617bdd357b0de3ab4a064c1",
+    "mime-type": "^3.0.4",
+    "readable-stream": "^1.0.33",
+    "tryit": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^0.17.1",
+    "istanbul": "^0.3.10",
+    "istanbul-coveralls": "^1.0.2",
+    "jscs": "^1.11.3",
+    "mocha": "^2.2.1",
+    "run-parallel": "^1.1.0"
+  },
+  "jscsConfig": {
+    "preset": "google",
+    "maximumLineLength": 98,
+    "requireBlocksOnNewline": true,
+    "validateLineBreaks": "LF"
+  }
+}
